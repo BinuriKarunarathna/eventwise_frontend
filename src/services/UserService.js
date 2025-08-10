@@ -1,7 +1,5 @@
-import axios from "axios";
+import api from './api';
 
-const API = process.env.REACT_APP_API_URL + "/users";
-
-export const registerUser = (userData) => axios.post(`${API}/register`, userData);
-export const loginUser = (loginData) => axios.post(`${API}/login`, loginData);
-export const getUserDetails = (userId) => axios.get(`${API}/${userId}`);
+export const registerUser = (userData) => api.post('/users/register', userData);
+export const loginUser = (loginData) => api.post('/users/login', loginData);
+export const getUserDetails = (userId) => api.get(`/users/${userId}`);

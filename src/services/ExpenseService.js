@@ -1,9 +1,7 @@
-import axios from "axios";
+import api from './api';
 
-const API = "http://localhost:3001/api/expenses";
-
-export const getAllExpenses = (eventId) => axios.get(`${API}/event/${eventId}`);
-export const getExpenseById = (id) => axios.get(`${API}/${id}`);
-export const createExpense = (expenseData) => axios.post(`${API}`, expenseData);
-export const updateExpense = (id, updatedData) => axios.put(`${API}/${id}`, updatedData);
-export const deleteExpense = (id) => axios.delete(`${API}/${id}`);
+export const getAllExpenses = (eventId) => api.get(`/expenses/event/${eventId}`);
+export const getExpenseById = (id) => api.get(`/expenses/${id}`);
+export const createExpense = (expenseData) => api.post('/expenses', expenseData);
+export const updateExpense = (id, updatedData) => api.put(`/expenses/${id}`, updatedData);
+export const deleteExpense = (id) => api.delete(`/expenses/${id}`);

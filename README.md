@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# EventWise Frontend
+
+A React-based frontend application for event management with expense tracking capabilities.
+
+## Features
+
+- User authentication (Login/Register)
+- Event management (Create, view, edit events)
+- Expense tracking per event
+- Dashboard with analytics and reports
+- User profile management
+- Responsive design with Tailwind CSS
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

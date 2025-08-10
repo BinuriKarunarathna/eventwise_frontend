@@ -28,11 +28,9 @@ const Dashboard = () => {
     console.log("Initializing dashboard...");
     
     try {
-      const userData = localStorage.getItem('user');
-      const token = localStorage.getItem('token');
+  const userData = localStorage.getItem('user');
       
-      console.log("Raw user data from localStorage:", userData);
-      console.log("Token from localStorage:", token);
+  console.log("Raw user data from localStorage:", userData);
       
       if (userData) {
         const parsedUser = JSON.parse(userData);

@@ -31,19 +31,15 @@ const LoginPage = () => {
       const userData = response.data;
       console.log('Full user data received:', userData);
 
-      // Save user data to localStorage
+      // Save user data to localStorage (no token)
       if (userData.user) {
         // If response has nested user object
         localStorage.setItem('user', JSON.stringify(userData.user));
-        localStorage.setItem('token', userData.token || '');
         console.log('Stored user:', userData.user);
-        console.log('Stored token:', userData.token);
       } else {
         // If response is the user object directly
         localStorage.setItem('user', JSON.stringify(userData));
-        localStorage.setItem('token', userData.token || '');
         console.log('Stored user directly:', userData);
-        console.log('Stored token:', userData.token);
       }
 
       alert("Login successful");
